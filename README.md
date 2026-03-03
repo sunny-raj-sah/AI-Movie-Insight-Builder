@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ # 🎬 AI Movie Insight Builder
 
-## Getting Started
+An AI-powered movie analysis platform built with **Next.js 16**, **OMDb API**, and **Groq LLM**.  
+This app allows users to search movies, explore detailed information, and generate AI-driven insights including summaries, themes, tone, audience targeting, and similar recommendations.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+
+🔗 Live App: https://your-vercel-link.vercel.app  
+🔗 GitHub Repo: https://github.com/your-username/your-repo
+
+---
+
+## ✨ Features
+
+- 🔍 Movie Search with suggestions
+- 🎬 Movie Selection with Poster & Basic Details
+- 📖 Expandable Full Details View
+- 🤖 AI-Powered Movie Insights:
+  - Summary
+  - Themes
+  - Tone / Mood
+  - Target Audience
+  - Key Insights
+  - Similar Movies with reasons
+- 🔄 Smart State Management (No stale AI data)
+- ⬅ Back Navigation
+- ⚡ Fast API routes using Next.js App Router
+- 🌍 Deployed on Vercel
+
+---
+
+## 🧠 AI Insight Engine
+
+This project integrates Groq’s LLM model:
+
+Model Used: llama-3.1-8b-instant
+
+
+The AI analyzes the selected movie’s title and plot to generate structured insights.
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- Next.js 16 (App Router)
+- React (Hooks, useState, useEffect)
+- Tailwind CSS
+
+### Backend
+- Next.js API Routes
+- Groq LLM API
+- OMDb API
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Project Structure
+app/
+├── page.js
+├── api/
+│ ├── search/route.js
+│ ├── movie/route.js
+│ └── ai/route.js
+.env.local
+
+
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+GROQ_API_KEY=your_groq_api_key_here
+OMDB_API_KEY=your_omdb_api_key_here
+
+
+⚠ Never commit `.env.local` to GitHub.
+
+---
+
+## 🧪 Run Locally
+
+Clone the project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone  https://github.com/sunny-raj-sah/AI-Movie-Insight-Builder.git
+cd AI-Movie-Insight-Builder
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies: npm install
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Run development server:  npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open:  http://localhost:3000
 
-## Learn More
+🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed using Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Push to GitHub
 
-## Deploy on Vercel
+Import project in Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add environment variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy
+
+🎯 What This Project Demonstrates
+
+Full-stack development with Next.js
+
+AI API integration (Groq LLM)
+
+Prompt engineering
+
+Clean state management
+
+Dynamic UI rendering
+
+Production deployment workflow
+
+Error handling & API safety checks
+
+🧑‍💻 Author
+
+Sunny Raj
+B.Tech CSE (2021–2025)
+Backend-Focused Full-Stack Developer
+
+LinkedIn: https://www.linkedin.com/in/sunny-raj-885588313/
+
+GitHub: https://github.com/sunny-raj-sah
+
+
+⭐ Future Improvements
+
+IMDb Rating Badge UI
+
+Favorites System (LocalStorage)
+
+Streaming Platform Suggestions
+
+Structured JSON AI response rendering
+
+Advanced UI animations
+
+Authentication & user profiles
+
+📜 License
+
+This project is for educational and portfolio purposes.
+
+
+---
+
