@@ -218,6 +218,7 @@ useEffect(() => {
       {/* Full Details */}
       {showFullDetails && (
         <div className="mt-8 border-t border-gray-700 pt-6 space-y-2">
+        {/* <div className= "bg-yellow-400 text-black px-3 py-1 rounded-half"> */}
           <p><strong>Genre:</strong> {selected.Genre}</p>
           <p><strong>Director:</strong> {selected.Director}</p>
           <p><strong>Actors:</strong> {selected.Actors}</p>

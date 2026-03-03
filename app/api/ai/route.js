@@ -2,7 +2,7 @@
 
 export async function POST(req) {
   try {
-    const { title, plot } = await req.json();
+    const { title, plot ,rating} = await req.json();
 
     if (!process.env.GROQ_API_KEY) {
       return NextResponse.json(
@@ -21,17 +21,7 @@ export async function POST(req) {
         },
         body: JSON.stringify({
            model: "llama-3.1-8b-instant",
-        //   llama-3.1-8b-instant",
-          // messages: [
-          //   {
-          //     role: "system",
-          //     content: "You are a movie recommendation assistant.",
-          //   },
-          //   {
-          //     role: "user",
-          //     content: `Suggest 5 movies similar to "${title}". Here is the plot: ${plot}`,
-          //   },
-          // ],
+
 
           messages: [
   {
@@ -41,20 +31,21 @@ export async function POST(req) {
   {
     role: "user",
     content: `
-Analyze the following movie and provide structured insights.
+ 
+Based on the movie plot and IMDb rating (${rating,plot, title}),
+do the following:
 
-Title: ${title}
+1. Summarize audience sentiment in 4-5 lines.
+2. Classify overall sentiment as one of:
+   Positive, Mixed, or Negative.
+3. Then provide key themes and insights.
 
-Plot: ${plot}
-
-Please provide:
-
-1. A short 3-4 line summary.
-2. Main themes of the movie.
-3. Overall tone or mood.
-4. Target audience type.
-5. 3 key insights about the story.
-6. 3 similar movies with a short reason for each.
+ 
+ 
+4. Overall tone or mood.
+5. Target audience type.
+6. 3 key insights about the story.
+7. 3 similar movies with a short reason for each.
 
 Keep the response clean and well structured.
     `,
