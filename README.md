@@ -7,8 +7,8 @@ This app allows users to search movies, explore detailed information, and genera
 
 ## 🚀 Live Demo
 
-🔗 Live App: https://your-vercel-link.vercel.app  
-🔗 GitHub Repo: https://github.com/your-username/your-repo
+🔗 Live App:  https://ai-movie-insight-builder-rosy.vercel.app/
+🔗 GitHub Repo: https://github.com/sunny-raj-sah/AI-Movie-Insight-Builder.git
 
 ---
 
